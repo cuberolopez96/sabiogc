@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once 'modules/config.php';
 require_once 'modules/functions.php';
 require_once 'modules/entity/ConnectDB.php';
@@ -6,6 +7,9 @@ require_once 'modules/entity/Preguntas.php';
 require_once 'modules/entity/Categorias.php';
 require_once 'modules/entity/Niveles.php';
 require_once 'modules/entity/Respuestas.php';
+require_once 'modules/entity/Expertos.php';
+cargarVariablesSesion();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

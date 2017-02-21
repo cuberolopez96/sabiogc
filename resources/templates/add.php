@@ -10,7 +10,6 @@
 		}
 		
 		if(!isset($_POST['tipoobjeto'])){
-			echo "hola";
 			$bandera = false;
 		}
 		if(!isset($_POST['categoria'])){

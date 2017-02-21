@@ -1,7 +1,11 @@
 <?php 
+comprobarPermisos();
 $preguntas = Preguntas::getPreguntas();
 
  ?>
+ <header>
+ 	<h2>Bienvenido <?php echo $_SESSION['usuario']['usuario']; ?></h2>
+ </header>
 <div class="cards">
 	<?php foreach ($preguntas as $key => $pregunta): ?>
 		<div class="card">
