@@ -23,12 +23,16 @@ if (isset($_POST['login'])) {
 	}
 }
  ?>
+ <nav>
+ 	<a href="index.php" class="brand">SabioGC</a>
+ 	
+ </nav>
 <div class="container">
 	<div>
 		<?php foreach ($errors as $key => $error): ?>
 			<div class="error"><?php echo $error ?></div>
 		<?php endforeach ?>
-		<form action="/?page=login" method="post">
+		<form action="index.php?page=login" method="post">
 			<label for="">Usuario</label>
 			<input type="text" name="user">
 			<label for="">Password</label>

@@ -41,5 +41,17 @@ function comprobarPermisos(){
 		header("Location: /?page=login");
 	}
 }
+function isAdmin(){
+	$bandera = false;
+	if ($_SESSION['usuario']['usuario']=='admin') {
+		$bandera = true;
+	}
+	return $bandera;
+}
+function comprobarPermisosAdministrador(){
+	if (!isAdmin()) {
+		header("Location: index.php");
+	}
+}
   
 ?>

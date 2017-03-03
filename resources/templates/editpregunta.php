@@ -80,6 +80,11 @@
 
 	}
  ?>
+ <nav>
+ 	<a href="index.php" class="brand">SabioGC</a>
+ 	<a href="index.php?page=logout">Salir</a>
+ 	<a href="index.php?page">Volver</a>
+ </nav>
 <div class="container">
 	<form action="/?page=editpregunta&id=<?php echo $id ?>" method="post" enctype="multipart/form-data">
 		<label for="">pregunta</label>

@@ -1,5 +1,6 @@
 <?php 
-	$categorias = Categorias::getCategorias();
+	comprobarPermisos();
+	$categorias = ExpertosCategorias::findByUser($_SESSION['usuario']['id']);
 	$niveles = Niveles::getNiveles();
 	$errors = array();
 	if(isset($_POST['add'])){
@@ -65,13 +66,18 @@
 
 	}
  ?>
+ <nav>
+ 	<a href="index.php" class="brand">SabioGC</a> 			
+	<a href="index.php?page=logout">Salir</a>
+	<a href="index.php">Volver</a>
+ </nav>
 <div class="container">
 	<div>
 		<?php foreach ($errors as $key => $error): ?>
 			<div class="error"><?php echo $error ?></div>
 		<?php endforeach ?>
 	</div>
-	<form action="/?page=add" method="post" enctype="multipart/form-data">
+	<form action="/?page=addpregunta" method="post" enctype="multipart/form-data">
 		<label for="">pregunta</label>
 		<input type="text" name="pregunta" required>
 		<label for="">Objeto</label>

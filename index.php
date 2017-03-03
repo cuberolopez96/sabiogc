@@ -8,6 +8,7 @@ require_once 'modules/entity/Categorias.php';
 require_once 'modules/entity/Niveles.php';
 require_once 'modules/entity/Respuestas.php';
 require_once 'modules/entity/Expertos.php';
+require_once 'modules/entity/ExpertosCategorias.php';
 cargarVariablesSesion();
 
 ?>
@@ -24,11 +25,8 @@ cargarVariablesSesion();
 
 </head>
 <body>
-	<nav>
-		<a href="/" class="brand">SabioGC</a>
-		<a href="/?page=add"><i class="fa fa-plus">
-		</i></a>
-	</nav>
+	
+
 	<main>
 		<?php require_once 'modules/route.php' ?>
 	</main>

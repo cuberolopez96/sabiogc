@@ -7,6 +7,14 @@
 
 
 	?>
+	<nav>
+ 	<a href="index.php" class="brand">SabioGC</a>
+ 	<?php if (isAdmin()): ?>
+			<a href="index.php?page=expertos">Expertos</a>
+			<a href="index.php?page=categorias">Categorias</a>
+		<?php endif ?>
+			<a href="index.php?page=logout">Salir</a>
+ </nav>
 	<div class="encabezado">
 		<div class="encabezado-objeto">
 			<?php if (!isset($pregunta['Objeto'])): ?>
